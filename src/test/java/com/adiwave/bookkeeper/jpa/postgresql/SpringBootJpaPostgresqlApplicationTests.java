@@ -1,4 +1,4 @@
-package com.bezkoder.spring.jpa.postgresql;
+package com.adiwave.bookkeeper.jpa.postgresql;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SpringBootJpaPostgresqlApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }

@@ -19,25 +19,25 @@ public class TypeService {
     }
 
     public List<Typename> getTypesAll() {
-        return Typenamepository.findAll();
+        return typenamepository.findAll();
     }
 
     public Optional<Typename> getTypeId(Long id) {
-        return Typenamepository.findById(id);
+        return typenamepository.findById(id);
     }
 
     public Typename addType(Typename type) {
-        return Typenamepository.save(type);
+        return typenamepository.save(type);
     }
 
     @Transactional
     public Typename editType(Typename type) throws Exception {
-        Typename typeEdit = Typenamepository.findById(type.getId()).orElseThrow(() -> new Exception("Type not found"));
+        Typename typeEdit = typenamepository.findById(type.getId()).orElseThrow(() -> new Exception("Type not found"));
         typeEdit.setName(type.getName());
         return typeEdit;
     }
 
     public void deleteTypeById(Long id) {
-        Typenamepository.deleteById(id);
+        typenamepository.deleteById(id);
     }
 }
